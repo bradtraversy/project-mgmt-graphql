@@ -24,6 +24,10 @@ export default function EditProjectForm({ project }) {
     refetchQueries: [{ query: GET_PROJECT, variables: { id: project.id } }],
   });
 
+  const onClick = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -71,7 +75,7 @@ export default function EditProjectForm({ project }) {
           </select>
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button onClick={onClick} type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
