@@ -52,6 +52,7 @@ export default function AddProjectModal() {
             className='btn btn-primary'
             data-bs-toggle='modal'
             data-bs-target='#addProjectModal'
+            disabled={data.clients.length > 0 ? false : true}
           >
             <div className='d-flex align-items-center'>
               <FaList className='icon' />
